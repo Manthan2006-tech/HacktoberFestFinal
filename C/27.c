@@ -31,6 +31,37 @@
 // nums.length == 3
 // 1 <= nums[i] <= 100
 
-char* triangleType(int* nums, int numsSize) {
-    
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+    int num[2];
+    printf("Enter the length of a side ");
+    scanf("%d", &num[0]);
+
+    printf("Enter the length of b side ");
+    scanf("%d", &num[1]);
+
+    printf("Enter the length of c side ");
+    scanf("%d", &num[2]);
+
+    if (num[0]==num[1] && num[0]==num[2])
+    {
+        printf("The given triangle is equiateral triangle");
+    }
+    else if (num[0]==num[1] && num[0]!=num[2])
+    {
+        printf("The given triangle is an isosceles triangle");
+    }
+    else if (num[0]!=num[1] && num[0]==num[2])
+    {
+        printf("The given triangle is an isosceles triangle");
+    }
+    else
+    {
+        printf("The given triangle is a scalene triangle");
+    }
+
+    return 0;
 }
